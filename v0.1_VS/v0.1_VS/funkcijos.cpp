@@ -2,9 +2,9 @@
 #include "funkcijos.h"
 
 
-std::vector<int> To_Hex(std::vector<int> rezultatas)
+std::vector<long int> To_Hex(std::vector<long int> rezultatas)
 {
-	std::vector<int>hex;
+	std::vector<long int>hex;
 	for (int i = 0; i < 65; i++)
 	{
 		hex.push_back(0);
@@ -14,33 +14,34 @@ std::vector<int> To_Hex(std::vector<int> rezultatas)
 		for (int i = 0; i < 65; i++)
 		{
 			int x;
-			x = rezultatas[j] + static_cast<int>(pow(i, 2));
+			x = (rezultatas[j] * (i+1)) + hex[i];
 			hex[i] = hex[i] + x;
+			if (hex[i] < 0)
+			{
+				hex[i] = hex[i] * -1;
+			}
 		}
 	}
 	for (int i = 0; i < 65; i++)
 	{
-		hex[i] = hex[i] % 16;
+		hex[i] = hex[i] % 32;
+		//hex[i] = hex[i] % 16;
 	}
 	return hex;
 
 }
 
-std::vector<int> To_Dec(std::vector<data> enigma, std::vector<char> failas)
+std::vector<long int> To_Dec(std::vector<char> failas)
 {
-	std::vector<int> rezultatas;
+	std::vector<long int> rezultatas;
 	for (auto i = 0; i < failas.size(); i++)
 	{
-		for (auto j = 0; j < enigma.size(); j++)
-		{
-			if (failas[i] == enigma[j].x)
-			{
-				rezultatas.push_back(enigma[j].value);
-			}
-		}
+		rezultatas.push_back(long int(failas[i]));
 	}
 	return rezultatas;
 }
+
+
 std::vector<data> Nuskaitymas_data()
 {
 	std::vector<data>enigma;

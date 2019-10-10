@@ -10,8 +10,8 @@
 #define FUNKCIJOS_H
 
 
-std::vector<int>To_Hex(std::vector<int> rezultatas);
-std::vector<int> To_Dec(std::vector<data> enigma, std::vector<char> failas);
+std::vector<long int>To_Hex(std::vector<long int> rezultatas);
+std::vector<long int> To_Dec(std::vector<char> failas);
 std::vector<data> Nuskaitymas_data();
 std::vector<char> Nuskaitymas_failas(std::string pav);
 
