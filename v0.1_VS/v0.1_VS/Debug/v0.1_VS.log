@@ -1,4 +1,4 @@
 ﻿  funkcijos.cpp
-c:\users\vladas\desktop\blockchain\v0.1_vs\v0.1_vs\funkcijos.cpp(12): warning C4018: '<': signed/unsigned mismatch
-c:\users\vladas\desktop\blockchain\v0.1_vs\v0.1_vs\funkcijos.cpp(37): warning C4018: '<': signed/unsigned mismatch
+c:\users\vladas\desktop\blockchain\v0.1_vs\v0.1_vs\funkcijos.cpp(13): warning C4018: '<': signed/unsigned mismatch
+c:\users\vladas\desktop\blockchain\v0.1_vs\v0.1_vs\funkcijos.cpp(45): warning C4018: '<': signed/unsigned mismatch
   v0.1_VS.vcxproj -> C:\Users\Vladas\Desktop\BlockChain\v0.1_VS\Debug\v0.1_VS.exe

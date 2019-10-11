@@ -7,25 +7,33 @@ std::vector<long int> To_Hex(std::vector<long int> rezultatas)
 	std::vector<long int>hex;
 	for (int i = 0; i < 65; i++)
 	{
-		hex.push_back(0);
+		hex.push_back(5);
 	}
+	int eil_nr=0;
 	for (auto j = 0; j < rezultatas.size(); j++)
 	{
 		for (int i = 0; i < 65; i++)
 		{
 			int x;
-			x = (rezultatas[j] * (i+1)) + hex[i];
+			x = (rezultatas[j] * (i+1)) + hex[eil_nr];
 			hex[i] = hex[i] + x;
 			if (hex[i] < 0)
 			{
 				hex[i] = hex[i] * -1;
 			}
 		}
+		if (eil_nr < 64)
+		{
+			eil_nr++;
+		}
+		else
+		{
+			eil_nr = 0;
+		}
 	}
 	for (int i = 0; i < 65; i++)
 	{
-		hex[i] = hex[i] % 32;
-		//hex[i] = hex[i] % 16;
+		hex[i] = hex[i] % 16;
 	}
 	return hex;
 
@@ -36,7 +44,7 @@ std::vector<long int> To_Dec(std::vector<char> failas)
 	std::vector<long int> rezultatas;
 	for (auto i = 0; i < failas.size(); i++)
 	{
-		rezultatas.push_back(long int(failas[i]));
+		rezultatas.push_back(static_cast<int>(failas[i]));
 	}
 	return rezultatas;
 }
