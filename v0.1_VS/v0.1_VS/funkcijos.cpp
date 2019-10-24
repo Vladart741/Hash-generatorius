@@ -140,14 +140,18 @@ int trecia_uzd(std::string pav)
 {
 	std::vector<unsigned long long int> suma1,suma2;
 	std::ifstream fd;
+	std::vector<std::string>tex1,tex2;
 	fd.open(pav);
 	while (!fd.eof())
 	{
+		std::string tarpinis;
 		unsigned long long int a, b = 0;
 		for (auto i = 0; i < 5; i++)
 		{
 			char x;
+			
 			fd >> x;
+			tarpinis.push_back(x);
 			int a = int(x);
 			if (a < 0)
 			{
@@ -156,12 +160,16 @@ int trecia_uzd(std::string pav)
 			b = b + (a*(i + 1));
 		}
 		suma1.push_back(b);
+		tex1.push_back(tarpinis);
 
 		 b = 0;
+		 std::string tarpinis2;
 		for (auto i = 0; i < 5; i++)
 		{
 			char x;
+			
 			fd >> x;
+			tarpinis2.push_back(x);
 			int a = int(x);
 			if (a < 0)
 			{
@@ -170,10 +178,10 @@ int trecia_uzd(std::string pav)
 			b = b + (a*(i + 1));
 		}
 		suma2.push_back(b);
+		tex2.push_back(tarpinis2);
 	}
 	int kiek_pasikartojo = 0;
 	std::vector<int>hex1, hex2; //Konvertuoja i HEX
-	std::vector<std::vector<int>>hex21, hex22;
 
 	for (auto i = 0; i < suma1.size(); i++)
 	{
@@ -182,6 +190,21 @@ int trecia_uzd(std::string pav)
 		if (hex1 == hex2 & suma1[i] != suma2[i])
 		{
 			kiek_pasikartojo++;
+			std::cout << "Text: " << tex1[i] << " , " << "Suma: " << suma1[i] << " , Hash: ";
+			for (int i = 0; i < 32; i++)
+			{
+				std::cout << std::hex << hex1[i];
+
+			}
+			std::cout << std::endl;
+			std::cout << "Text: " << tex2[i] << " , " << "Suma: " << suma2[i] << " , Hash: ";
+			for (int i = 0; i < 32; i++)
+			{
+				std::cout << std::hex << hex1[i];
+
+			}
+			std::cout << std::endl;
+			std::cout << std::endl;
 		}
 
 	}
