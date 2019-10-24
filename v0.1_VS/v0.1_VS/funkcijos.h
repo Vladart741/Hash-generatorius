@@ -5,14 +5,17 @@
 #include "struktura.h"
 #include <vector>
 #include <math.h> 
+#include <random>
+#include <chrono>
 
 #ifndef FUNKCIJOS_H
 #define FUNKCIJOS_H
 
 
-std::vector<long int>To_Hex(std::vector<long int> rezultatas);
-std::vector<long int> To_Dec(std::vector<char> failas);
-std::vector<data> Nuskaitymas_data();
-std::vector<char> Nuskaitymas_failas(std::string pav);
+std::vector<int> To_Hex(unsigned long long int suma);
+std::vector<unsigned long long int> Nuskaitymas_failas_2(std::string pav);
+unsigned long long int Nuskaitymas_failas(std::string pav);
+void spausdinimas(std::vector<std::vector<int>>hex2);
+int randomNum(int a, int b);
 
 #endif //FUNKCIJOS_H
