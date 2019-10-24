@@ -60,3 +60,12 @@ Išvestis:
 
 ![image](https://user-images.githubusercontent.com/12825358/67531078-ddb50c00-f6c9-11e9-991e-2ff250ad506d.png)
 
+### 3. Susigeneruokite bent 1000 000 atsitiktinių simbolių eilučių (`string`'ų) __porų__, pvz.: (asdfg, hijkl) apsiribojant iki 5 simbolių eilučių ilgiu ir patikrinkite, kad visais atvejais gautieji __porų__ hash'ai nesutampa. Tokiu būdų bent dalinai įsitikinsite, kad Jūsų hash funkcija atitinka 6-ą reikalavimą.
+
+Sugeneruotas failas:
+![image](https://user-images.githubusercontent.com/12825358/67531822-c88dac80-f6cc-11e9-92d3-d95559bf5e23.png)
+
+Suhash'avus šitą failą, buvo rasti 25 vienodi hasha'ai, tai yra 0,000025% (buvo patikrinta 1000000 porų).
+
+![image](https://user-images.githubusercontent.com/12825358/67531763-98dea480-f6cc-11e9-8472-8e542a674921.png)
+
