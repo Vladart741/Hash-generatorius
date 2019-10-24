@@ -37,7 +37,7 @@ std::vector<unsigned long long int> Nuskaitymas_failas_2(std::string pav)
 				a = (a*-1) + 200;
 			}
 
-			b = b + sqrt(a)*(i + 1);
+			b = b + (a*(i + 1));
 		}
 		suma.push_back(b);
 	}
@@ -61,7 +61,7 @@ unsigned long long int Nuskaitymas_failas(std::string pav)
 		}
 
 		i++;
-		suma = suma + +sqrt(a)*(i + 1);
+		suma = suma + (a*(i + 1));
 	}
 	return suma;
 }
@@ -103,4 +103,88 @@ int randomNum(int a, int b) {
 
 	distribution.param(std::uniform_int_distribution<int>::param_type{ a, b });
 	return distribution(rng);
+}
+void randomChars(std::string pav)
+{
+	std::vector<std::string>charai = { "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z" };
+	
+	std::ofstream fr;
+	fr.open(pav);
+	std::vector<std::vector<std::string>>pora1, pora2;
+	for (int i = 0; i < 1000000; i++)
+	{
+		std::vector<std::string>a;
+		for (int j = 0; j < 5; j++)
+		{
+			int x = randomNum(0, 25);
+			a.push_back(charai[x]);
+		}
+		pora1.push_back(a);
+
+		std::vector<std::string>b;
+		for (int j = 0; j < 5; j++)
+		{
+			int x = randomNum(0, 25);
+			b.push_back(charai[x]);
+		}
+		pora2.push_back(b);
+	}
+	for (auto i = 0; i < pora1.size(); i++)
+	{
+		fr << pora1[i][0] << pora1[i][1] << pora1[i][2] << pora1[i][3] << pora1[i][4] << " " << pora2[i][0] << pora2[i][1] << pora2[i][2] << pora2[i][3] << pora2[i][4] << std::endl;
+	}
+	fr.close();
+}
+
+int trecia_uzd(std::string pav)
+{
+	std::vector<unsigned long long int> suma1,suma2;
+	std::ifstream fd;
+	fd.open(pav);
+	while (!fd.eof())
+	{
+		unsigned long long int a, b = 0;
+		for (auto i = 0; i < 5; i++)
+		{
+			char x;
+			fd >> x;
+			int a = int(x);
+			if (a < 0)
+			{
+				a = (a*-1) + 200;
+			}
+			b = b + (a*(i + 1));
+		}
+		suma1.push_back(b);
+
+		 b = 0;
+		for (auto i = 0; i < 5; i++)
+		{
+			char x;
+			fd >> x;
+			int a = int(x);
+			if (a < 0)
+			{
+				a = (a*-1) + 200;
+			}
+			b = b + (a*(i + 1));
+		}
+		suma2.push_back(b);
+	}
+	int kiek_pasikartojo = 0;
+	std::vector<int>hex1, hex2; //Konvertuoja i HEX
+	std::vector<std::vector<int>>hex21, hex22;
+
+	for (auto i = 0; i < suma1.size(); i++)
+	{
+		hex1 = To_Hex(suma1[i]);
+		hex2 = To_Hex(suma2[i]);
+		if (hex1 == hex2 & suma1[i] != suma2[i])
+		{
+			kiek_pasikartojo++;
+		}
+
+	}
+
+	return kiek_pasikartojo;
 }

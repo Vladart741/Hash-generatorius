@@ -1,7 +1,4 @@
-﻿  funkcijos.cpp
-c:\users\vladas\desktop\blockchain\v0.1_vs\v0.1_vs\funkcijos.cpp(32): warning C4018: '<': signed/unsigned mismatch
-c:\users\vladas\desktop\blockchain\v0.1_vs\v0.1_vs\funkcijos.cpp(40): warning C4244: '=': conversion from 'double' to 'unsigned __int64', possible loss of data
-c:\users\vladas\desktop\blockchain\v0.1_vs\v0.1_vs\funkcijos.cpp(31): warning C4101: 'a': unreferenced local variable
-c:\users\vladas\desktop\blockchain\v0.1_vs\v0.1_vs\funkcijos.cpp(64): warning C4244: '=': conversion from 'double' to 'unsigned __int64', possible loss of data
-c:\users\vladas\desktop\blockchain\v0.1_vs\v0.1_vs\funkcijos.cpp(73): warning C4018: '<': signed/unsigned mismatch
+﻿  v0.1_VS.cpp
+c:\users\vladas\desktop\blockchain\v0.1_vs\v0.1_vs\v0.1_vs.cpp(33): warning C4018: '<': signed/unsigned mismatch
+c:\users\vladas\desktop\blockchain\v0.1_vs\v0.1_vs\v0.1_vs.cpp(74): warning C4018: '<': signed/unsigned mismatch
   v0.1_VS.vcxproj -> C:\Users\Vladas\Desktop\BlockChain\v0.1_VS\Debug\v0.1_VS.exe

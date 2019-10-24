@@ -18,4 +18,7 @@ unsigned long long int Nuskaitymas_failas(std::string pav);
 void spausdinimas(std::vector<std::vector<int>>hex2);
 int randomNum(int a, int b);
 
+void randomChars(std::string pav);
+int trecia_uzd(std::string pav);
+
 #endif //FUNKCIJOS_H
