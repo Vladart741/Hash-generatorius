@@ -65,7 +65,7 @@ Išvestis:
 Sugeneruotas failas:
 ![image](https://user-images.githubusercontent.com/12825358/67531822-c88dac80-f6cc-11e9-92d3-d95559bf5e23.png)
 
-Suhash'avus šitą failą, buvo rasti 25 vienodi hasha'ai, tai yra 0,000025% (buvo patikrinta 1000000 porų).
+Suhash'avus šitą failą, buvo rasti 19 vienodų hasha'ų, tai yra 0,000019% (buvo patikrinta 1000000 porų).
 
-![image](https://user-images.githubusercontent.com/12825358/67531763-98dea480-f6cc-11e9-8472-8e542a674921.png)
+![image](https://user-images.githubusercontent.com/12825358/67533323-3be5ed00-f6d2-11e9-8b83-3533326054af.png)
 
