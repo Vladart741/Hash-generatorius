@@ -7,6 +7,9 @@
 #include <math.h> 
 #include <random>
 #include <chrono>
+#include <bitset>
+#include <algorithm>
+#include <numeric>  
 
 #ifndef FUNKCIJOS_H
 #define FUNKCIJOS_H
@@ -19,6 +22,16 @@ void spausdinimas(std::vector<std::vector<int>>hex2);
 int randomNum(int a, int b);
 
 void randomChars(std::string pav);
+void randomChars2(std::string pav);
 int trecia_uzd(std::string pav);
+std::vector<double> ketvirta_uzd(std::string pav);
+double sutapimai(std::string test1, std::string test2);
+
+
+double max(std::vector<double>rezultatai);
+double min(std::vector<double>rezultatai);
+double avg(std::vector<double>rezultatai);
+
+int kiek_sutapo(char a, char b);
 
 #endif //FUNKCIJOS_H
