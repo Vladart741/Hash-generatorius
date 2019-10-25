@@ -71,5 +71,5 @@ Suhash'avus šitą failą, buvo rasti 19 vienodų hasha'ų, tai yra 0,000019% (b
 
 ### 4. Susigeneruokite bent 100 000 atsitiktinių simbolių eilučių (`string`'ų) __porų__, , pvz.: (asdfg, bsdfg) tokių kad skirtųsi jos tik vienu simboliu ir apsiribojant iki 5 simbolių eilučių ilgiu. Įvertinkite Jūsų gautų hash'ų procentinį "skirtingumą" __bitų lygmenyje__. Išveskite minimalią, maksimalią ir vidurkines "skirtingumo" reikšmes. Tokiu būdų įsitikinsite, kaip gerai Jūsų hash funkcija atitinka 7-ą reikalavimą.
 
-![image](https://user-images.githubusercontent.com/12825358/67567593-d2e29180-f732-11e9-9871-74bc73592180.png)
+![image](https://user-images.githubusercontent.com/12825358/67568002-b6932480-f733-11e9-8dc1-18f5df3f75cb.png)
 
